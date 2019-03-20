@@ -5,8 +5,7 @@ import Dummy from './component/Dummy/Dummy';
 console.log("hallo");
 class App extends React.Component {
 
-    render() {
-        console.log("hallo");
+    render() { 
         return (
             <div className="container">
                 Hello
