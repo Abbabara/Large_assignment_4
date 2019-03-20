@@ -40,16 +40,7 @@ class Dummy extends Component {
     });
     console.log(addUser(this.state.userName));
     getUserList();
-    /*
-    SocketContext.emit("adduser", this.state.userName, function(available){
-      if (available){
-        console.log("user available!");
-      }
-      else{
-        alert("Name already taken :(");
-      }
-    });
-    */
+    
   }
 
 
