@@ -2,6 +2,7 @@ import connectToSocketIoServer from 'socket.io-client';
 export const Socket = connectToSocketIoServer("http://localhost:8080");
 
 export const addUser = (user) => {
+
   return new Promise((resolve, reject) => {
     Socket.emit("adduser", user, function(available){
       if (available){
@@ -12,7 +13,7 @@ export const addUser = (user) => {
       }
     });
   })
-
+  
 }
 
 export const getUserList = () => {
