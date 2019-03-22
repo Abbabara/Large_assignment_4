@@ -35,11 +35,11 @@ class Login extends Component {
 
   render() {
     return (
-      <form class="text-center" onSubmit={ e => this.submitForm(e)} >
-        <h1 class="m-5">Welcome to Chat.IO</h1>
+      <form className="text-center" onSubmit={ e => this.submitForm(e)} >
+        <h1 className="m-5">Welcome to Chat.IO</h1>
         <h2>Enter username</h2>
-        <input name="userName" class="form " type="text" value={this.state.userName} onChange={e => this.onInput(e)} />
-        <input class="btn btn-dark m-1" type="submit"/>
+        <input name="userName" className="form " type="text" value={this.state.userName} onChange={e => this.onInput(e)} />
+        <input className="btn btn-dark m-1" type="submit"/>
       </form>
     );
   }
