@@ -26,14 +26,11 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state);
     addUser(this.state.userName).then(() => {
-      console.log("true: available");
-
       this.setState({
         loggedIn: true
       });
 
     }).catch(() => {
-      console.log("false: not available");
       alert("Username is not available!");
     });
     console.log(addUser(this.state.userName));
@@ -49,8 +46,8 @@ class Login extends Component {
           <form className="text-center" onSubmit={ e => this.submitForm(e)} >
             <h1 className="m-5">Welcome to Chat.IO</h1>
             <h2>Enter username</h2>
-            <input name="userName" className="form " type="text" value={this.state.userName} onChange={e => this.onInput(e)} />
-            <input className="btn btn-dark m-1" type="submit"/>
+            <input name="userName" className="form m-1 t-2" type="text" value={this.state.userName} onChange={e => this.onInput(e)} />
+            <input className="btn btn-dark " type="submit"/>
           </form>
         </div>
       );
