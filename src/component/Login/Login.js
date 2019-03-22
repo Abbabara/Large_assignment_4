@@ -18,9 +18,9 @@ class Login extends Component {
     });
   };
 
-  componentDidMount(){
+  /*componentDidMount(){
     console.log(Socket);
-  }
+  }*/
 
   submitForm(e){
     e.preventDefault();
