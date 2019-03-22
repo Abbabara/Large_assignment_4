@@ -28,6 +28,8 @@ class Login extends Component {
     addUser(this.state.userName).then(() => {
       console.log("true: available");
 
+      localStorage.setItem('currentUser', this.state.userName);
+
       this.setState({
         loggedIn: true
       });
@@ -37,7 +39,6 @@ class Login extends Component {
       alert("Username is not available!");
     });
     console.log(addUser(this.state.userName));
-    getUserList();
   }
 
   render() {

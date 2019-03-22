@@ -1,12 +1,14 @@
 import React from 'react';
-import { Socket } from '../../services/Socket';
+import { Socket, getUserList } from '../../services/Socket';
 
 class Lobby extends React.Component {
+
+
     componentDidMount () {
         Socket.emit("joinroom", {room: "lobby"}, test => {
           if(test) {
             console.log("maybe joined?");
-            Socket.emit("rooms");
+            getUserList();
           }
         });
     }
@@ -14,7 +16,8 @@ class Lobby extends React.Component {
     render() {
         return (
             <div className="container">
-              <h2>LOGGED IN!!!</h2>
+              <h3>Logged in as: { localStorage.getItem('currentUser') }</h3>
+              
             </div>
         );
     }
