@@ -26,13 +26,10 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state);
     addUser(this.state.userName).then(() => {
-<<<<<<< HEAD
-=======
       console.log("true: available");
 
       localStorage.setItem('currentUser', this.state.userName);
 
->>>>>>> 8141195dda65451fb3660ed5ca8e3895025832ae
       this.setState({
         loggedIn: true
       });
@@ -62,7 +59,6 @@ class Login extends Component {
         <Lobby />
       );
     }
-
   }
 
 }
